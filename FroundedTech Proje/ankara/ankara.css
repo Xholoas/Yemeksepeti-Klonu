@@ -1,0 +1,338 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+header div:nth-of-type(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div:nth-of-type(2) span{
+    color: #ea004b;
+}
+
+.banner{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 100px;
+}
+
+.banner div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 100px 0;
+}
+
+.banner h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #222;
+}
+
+.banner div:nth-of-type(2){
+    position: relative;
+    background-image: url(../common/refresh-hero-home-tr.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    right: -18%;
+}
+
+.breadcumb{
+    display: flex;
+    max-width: 1440px;
+    padding: 5px 100px;
+    margin: 0 auto;
+    margin-bottom: -10px;
+}
+
+.breadcumb h1{
+    font-size: .85rem;
+    font-weight: 600;
+    color: #111;
+}
+
+.breadcumb a{
+    text-decoration: none;
+    color: #ea004b;
+    position: relative;
+    border-bottom: 1px solid #ea004b;
+}
+
+.breadcumb a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #ea004b;
+    transition: width .2s ease-out;
+    bottom: -1.5px;
+    left: 0;
+}
+
+.breadcumb a:hover::before{
+    width: 100%;
+}
+
+.breadcumb i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6d6d6d;
+    font-size: .65rem;
+    margin: 0 10px;
+}
+
+.restaurants{
+    display: flex;
+    margin: 0 auto;
+    padding: 0px 100px;
+    max-width: 1440px;
+    flex-direction: column;
+    margin-bottom: 400px;
+}
+
+.restaurants>h1{
+    font-size: 2rem;
+    color: #222;
+    font-weight: 400;
+}
+
+.restaurants .restaurants-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 25px;
+}
+
+.restaurants-content-box{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #000;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.restaurants-content-box:hover .content-box-img::before{
+    transform: scale(1.05);
+}
+
+.restaurants-content-box .content-box-img{
+    
+    padding: 100px 0;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.restaurants-content-box .content-box-img::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(images/tlz9-listing.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s cubic-bezier( 0.42, 0.7, 0.43, 0.71 );
+}
+
+.content-box-img div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 8px;
+    padding: 2px 7px;
+    background: #ea004b;
+}
+
+.content-box-img div *{
+    color: #fff;
+    font-size: 0.75rem;
+    margin: 2px 1px;
+}
+
+.content-box-img div span{
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.restaurants-content .content-box-content{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 10px;
+}
+
+.content-box-content .content-box-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-box-header h1{
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 5px;
+}
+
+.content-box-header div:nth-of-type(1)>i{
+    color: #ea004b;
+}
+
+.content-box-header>div{
+    display: flex;
+    align-items: center;
+}
+
+.content-box-header>div:nth-of-type(2) i{
+    color: #ea004b;
+    font-size: 0.7rem;
+    margin: 0 10px;
+}
+
+.content-box-header>div:nth-of-type(2) span{
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.content-box-header>div:nth-of-type(2) span b{
+    font-weight: lighter;
+    font-size: .72rem;
+}
+
+.content-box-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.content-box-price b{
+    font-weight: 700;
+    font-size: .75rem;
+    color: #222;
+    margin-right: 2px;
+}
+
+.content-box-price p{
+    font-size: 0.75rem;
+}
+
+.content-box-delivery{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.content-box-delivery div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.content-box-delivery div i{
+    font-size: 0.75rem;
+    margin-right: 5px;
+
+}
+
+.content-box-delivery div span{
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #222;
+}
+
+.content-box-delivery div:nth-of-type(3) i ,.content-box-delivery div:nth-of-type(3) span {
+    color: #ea004b;
+}
+
+.restaurants-content-box:nth-of-type(2) .content-box-img::before{
+    background-image: url(images/c4zw-listing.webp);
+}
+
+.restaurants-content-box:nth-of-type(3) .content-box-img::before{
+    background-image: url(images/eh05-listing.webp);
+}
+
+.restaurants-content-box:nth-of-type(4) .content-box-img::before{
+    background-image: url(images/cghp-listing.webp);
+}
+
+.restaurants-content-box:nth-of-type(5) .content-box-img::before{
+    background-image: url(images/xszf-listing.webp);
+}
+
+.restaurants-content-box:nth-of-type(6) .content-box-img::before{
+    background-image: url(images/fz10-listing.webp);
+}
+
+.restaurants-content-box:nth-of-type(7) .content-box-img::before{
+    background-image: url(images/fj4e-listing.webp);
+}
+
+.restaurants-content-box:nth-of-type(8) .content-box-img::before{
+    background-image: url(images/vhve-listing.webp);
+}
+
+
+@media only screen and (max-width: 1300px){
+
+    .restaurants .restaurants-content{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 975px){
+
+    .restaurants .restaurants-content{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    header{
+        display: grid !important;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: 2;
+        padding: 0 20px !important;
+    }
+
+    header div:nth-of-type(1){
+        grid-column: 1 / 12;
+        grid-row: 1;
+        place-self: center;
+    }
+
+    header div:nth-of-type(2){
+        grid-column: 1 / 12;
+        grid-row: 2;
+        place-self: center;
+    }
+
+    header nav ul li:nth-of-type(1), header nav ul li:nth-of-type(2){
+        display: none;
+    }
+
+    .banner h1, .restaurants>h1{
+        font-size: 1.45rem;
+        margin-bottom: 30px;
+    } 
+
+}
